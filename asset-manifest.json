@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Photoprint/static/css/main.5d63f6a8.css",
+    "main.js": "/Photoprint/static/js/main.956bc769.js",
+    "index.html": "/Photoprint/index.html",
+    "main.5d63f6a8.css.map": "/Photoprint/static/css/main.5d63f6a8.css.map",
+    "main.956bc769.js.map": "/Photoprint/static/js/main.956bc769.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d63f6a8.css",
+    "static/js/main.956bc769.js"
+  ]
+}
