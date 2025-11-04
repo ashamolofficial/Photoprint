@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Upload from "./Components/Upload";
+import OrderSummary from "./Components/OrderSummary";
+import Success from "./Pages/Success";
+import Cancel from "./Pages/Cancel";
 
 function App() {
+  const [photo, setPhoto] = useState(null);
+
   return (
-    <div className="text-center">
-      <header className="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen text-3xl">
-        <img src={logo} className="pointer-events-none h-40 animate-spin" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="text-blue-400"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div className="min-h-screen flex flex-col items-center p-6 bg-gray-100 mt-10">
+        <Routes>
+          <Route path="/" element={!photo ? <Upload onUploaded={setPhoto} /> : <OrderSummary photo={photo} />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
