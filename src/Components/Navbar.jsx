@@ -10,9 +10,7 @@ export default function Navbar() {
       className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 flex justify-between items-center shadow-lg"
     >
       <h1 className="text-2xl font-bold tracking-wider">PhotoPrint</h1>
-      <div className="space-x-4">
-        <a href="/" className="hover:text-gray-200 transition-colors">Home</a>
-      </div>
+      
     </motion.nav>
   );
 }
